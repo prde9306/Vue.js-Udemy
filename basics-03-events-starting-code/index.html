@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <section id="events">
+      <h2>Events in Action</h2>
+      <button v-on:click="addCount()">Add</button>
+      <button @click="minusCount(4)">Remove</button>
+<!--      이렇게 바로해도 된다 여기 click안에 counter++-->
+      <button v-on:click="counter++">anotherAdd</button>
+<!--      v-once쓰면 안 변한다.   -->
+      <P v-once>Starting Counter:{{ counter }}</P>
+      <p>Result: {{ counter }}</p>
+<!--      v-on:input="" v-model 대신 이거로 해도 된다.  -->
+      <input type="text" v-model="name">
+      <p>Kimsungjun: {{ name }}</p>
+<!--      submit.prevent // eventDefault대신에 여기 이렇게 해도 된다.-->
+      <form v-on:submit="submitForm">
+        <input type="text">
+        <button>Sign Up</button>
+      </form>
+
+    </section>
+  </body>
+</html>
