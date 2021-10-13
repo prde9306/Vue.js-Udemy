@@ -6,7 +6,6 @@ const app = Vue.createApp({
       courseGoalA: 'Finish the course and learn',
       courseGoalB:'<h1>Hellon man</h1>',
       vueLink : 'https://naver.com'
-
     };
   },
   methods:{

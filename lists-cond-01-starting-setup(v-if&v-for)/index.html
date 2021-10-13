@@ -23,14 +23,15 @@
       <p v-if="goals.length===0">No goals have been added yet - please start adding some!</p>
       <ul v-else-if="goals.length >0 ">
         <!--이 list 안에서만 goal역할 작동한다-->
-        <li v-for="(goal, index) in goals" @click="removeGoal(index)">
+        <li v-for="(goal, index) in goals" :key="goal" @click="removeGoal(index)">
         <p>{{ goal }} - {{ index }}</p>
+<!--          이 밑에 클릭해도 위에 remove 작동 안하게 설정하는 것-->
           <input type="text" @click.stop>
         </li>
       </ul>
-<!--      <ul>-->
-<!--        <li v-for="(value, key) in {name: 'MAX', age: 31}">{{key}}: {{value}}</li>-->
-<!--      </ul>-->
+      <ul>
+        <li v-for="(value, key) in {name: 'MAX', age: 31}">{{key}}: {{value}}</li>
+      </ul>
     </section>
   </body>
 </html>

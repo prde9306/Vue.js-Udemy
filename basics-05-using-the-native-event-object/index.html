@@ -21,7 +21,7 @@
       <button v-on:click="add(10)">Add 10</button>
       <button v-on:click="reduce(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-bind:value="name" v-on:input="setName($event, 'lastName')">
+<!--      <input type="text" v-bind:value="name" v-on:input="setName($event, 'lastName')">-->
 <!--      위에꺼랑 똑같은 역할이 v-model 이게 양방향 데이터 바인딩 듣고있으면서 && 또 데이터 입력도 함 -->
       <input type="text" v-model="name">
       <input type="text" v-model="lastName">
