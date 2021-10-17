@@ -2,6 +2,21 @@ import { createApp } from 'vue';
 import {createStore} from 'vuex';
 import App from './App.vue';
 
+
+const counterModule={
+  state(){
+
+  },
+  mutations:{
+
+  },
+  actions:{
+
+  },
+  getters:{
+
+  }
+};
 const store  =createStore({
   state(){
     return{
